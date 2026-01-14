@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BMJ.SERVICE | Plateforme de Formation</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif;}
+
+body{
+    background:url("https://images.unsplash.com/photo-1522202176988-66273c2fd55f") no-repeat center center fixed;
+    background-size:cover;
+    min-height:100vh;
+    color:#fff;
+    display:flex;
+    flex-direction:column;
+}
+
+/* HEADER */
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 8%;
+    background:rgba(11,28,45,0.9);
+    position:relative;
+}
+.logo{
+    font-size:24px;
+    font-weight:bold;
+    color:#00e5ff;
+}
+.menu-icon{
+    font-size:26px;
+    cursor:pointer;
+}
+.menu{
+    position:absolute;
+    top:60px;
+    right:8%;
+    background:rgba(0,0,0,0.85);
+    border:1px solid #00e5ff;
+    border-radius:12px;
+    width:220px;
+    display:none;
+    flex-direction:column;
+}
+.menu a{
+    padding:15px;
+    color:#fff;
+    text-decoration:none;
+    text-align:center;
+    border-bottom:1px solid rgba(255,255,255,0.1);
+}
+.menu a:hover{
+    background:#00e5ff;
+    color:#000;
+}
+
+/* HERO */
+.hero{
+    flex:1;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:40px 15px;
+}
+.hero-box{
+    max-width:650px;
+    background:rgba(0,0,0,0.75);
+    border:2px solid #00e5ff;
+    border-radius:20px;
+    padding:45px;
+    text-align:center;
+}
+.hero-box h1{
+    color:#00e5ff;
+    margin-bottom:20px;
+    font-size:32px;
+}
+.hero-box p{
+    font-size:17px;
+    line-height:1.7;
+    margin-bottom:30px;
+}
+.hero-box a{
+    display:inline-block;
+    padding:15px 35px;
+    background:#00e5ff;
+    color:#000;
+    font-weight:bold;
+    border-radius:14px;
+    text-decoration:none;
+    font-size:16px;
+}
+.hero-box a:hover{
+    background:#fff;
+}
+
+/* FOOTER */
+footer{
+    background:rgba(11,28,45,0.85);
+    padding:18px;
+    text-align:center;
+}
+footer a{
+    margin:0 12px;
+    font-size:28px;
+    color:#fff;
+    transition:0.3s;
+}
+footer a:hover{
+    color:#00e5ff;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">BMJ.SERVICE</div>
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+    <div class="menu" id="menu">
+        <a href="index.html">Accueil</a>
+        <a href="inscription.html">Inscription</a>
+        <a href="connexion.html">Connexion</a>
+    </div>
+</header>
+
+<section class="hero">
+    <div class="hero-box">
+        <h1>Bienvenue sur BMJ.SERVICE</h1>
+        <p>
+            Découvrez notre plateforme de formation et commencez à développer
+            vos compétences pour réussir dans vos projets et vos carrières.
+            BMJ.SERVICE vous accompagne avec des contenus structurés,
+            professionnels et orientés vers la réussite.
+        </p>
+        <a href="inscription.html">Commencer la formation</a>
+    </div>
+</section>
+
+<footer>
+    <a href="https://wa.me/243993585711" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    <a href="https://www.instagram.com/greatman9609" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://www.tiktok.com/@bmjreussir" target="_blank"><i class="fab fa-tiktok"></i></a>
+    <a href="https://youtube.com/@justinmussiwa" target="_blank"><i class="fab fa-youtube"></i></a>
+
+    <!-- ✅ LINKEDIN CORRECT ET OFFICIEL -->
+    <a href="https://www.linkedin.com/posts/justin-mussiwa-167b8a331_cest-%C3%A0-vous-de-prendre-conscience-activity-7341023134810017792-ogV-?utm_source=share&utm_medium=member_android&rcm=ACoAAFOlYF8BCTITKFVpRsSSQmMzECBb2wI6YyE"
+       target="_blank">
+       <i class="fab fa-linkedin-in"></i>
+    </a>
+</footer>
+
+<script>
+function toggleMenu(){
+    const menu=document.getElementById("menu");
+    menu.style.display=(menu.style.display==="flex")?"none":"flex";
+}
+</script>
+
+</body>
+</html>

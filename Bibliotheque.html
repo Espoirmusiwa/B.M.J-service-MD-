@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bibliothèque | BMJ.SERVICE</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+<style>
+* {margin:0; padding:0; box-sizing:border-box; font-family:Arial, Helvetica, sans-serif;}
+
+body{
+    background:url("https://images.unsplash.com/photo-1522202176988-66273c2fd55f") no-repeat center center fixed;
+    background-size:cover;
+    color:#fff;
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+}
+
+/* HEADER */
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 8%;
+    background:rgba(11,28,45,0.9);
+    position:relative;
+    z-index:1000;
+}
+.logo{font-size:24px;font-weight:bold;color:#00e5ff;}
+.menu-icon{font-size:26px;cursor:pointer;}
+.menu{
+    position:absolute;
+    top:60px;
+    right:8%;
+    background:rgba(0,0,0,0.85);
+    border:1px solid #00e5ff;
+    border-radius:10px;
+    display:none;
+    flex-direction:column;
+    width:220px;
+    z-index:1000;
+}
+.menu a{
+    padding:15px;
+    text-decoration:none;
+    color:#fff;
+    text-align:center;
+    border-bottom:1px solid rgba(255,255,255,0.1);
+}
+.menu a:hover{background:#00e5ff;color:#000;}
+
+/* LISTE DES LIVRES */
+.books-container{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    margin:50px 0;
+    gap:25px;
+}
+.book-card{
+    background: rgba(0,0,0,0.7);
+    border:2px solid #00e5ff;
+    border-radius:15px;
+    padding:20px;
+    width:320px;
+    text-align:center;
+    transition: all 0.3s ease;
+}
+.book-card h3{
+    color:#00e5ff;
+    font-size:20px;
+    margin-bottom:15px;
+}
+.book-card a{
+    display:inline-block;
+    background:#00e5ff;
+    color:#000;
+    font-weight:bold;
+    padding:10px 18px;
+    border-radius:12px;
+    text-decoration:none;
+    margin:5px;
+    transition:all 0.3s ease;
+}
+.book-card a:hover{
+    background:#fff;
+    transform:scale(1.05);
+}
+
+/* BOUTON RETOUR */
+.back-btn{
+    background:rgba(0,0,0,0.7);
+    border:2px solid #00e5ff;
+    color:#00e5ff;
+    padding:12px 25px;
+    font-size:16px;
+    font-weight:bold;
+    border-radius:12px;
+    text-decoration:none;
+    transition:all 0.3s ease;
+    margin:30px auto 50px auto;
+    display:block;
+    width:200px;
+    text-align:center;
+}
+
+/* FOOTER SOCIALS */
+footer.socials{
+    background:rgba(11,28,45,0.85);
+    padding:15px;
+    text-align:center;
+    margin-top:auto;
+}
+footer.socials a{
+    display:inline-block;
+    margin:0 10px;
+    font-size:28px;
+    color:#fff;
+    transition:transform 0.3s;
+}
+footer.socials a:hover{transform:scale(1.2);color:#00e5ff;}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">BMJ.SERVICE</div>
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+    <div class="menu" id="menu">
+        <a href="tableau_de_bord.html">Tableau de bord</a>
+        <a href="formation.html">Formation</a>
+        <a href="nos_services.html">Nos services</a>
+        <a href="apropos.html">À propos de nous</a>
+        <a href="paiement.html">Abonnement VIP</a>
+        <a href="mon_profil.html">Mon Profil</a>
+    </div>
+</header>
+
+<div class="books-container">
+    <div class="book-card">
+        <h3>Introduction à la Finance</h3>
+        <a href="pdf/finance_15_pages.pdf" download>LIRE</a>
+        <a href="pdf/finance_15_pages.pdf" download>TÉLÉCHARGER</a>
+    </div>
+    <div class="book-card">
+        <h3>Leadership pour Entrepreneurs</h3>
+        <a href="pdf/leadership_17_pages.pdf" download>LIRE</a>
+        <a href="pdf/leadership_17_pages.pdf" download>TÉLÉCHARGER</a>
+    </div>
+    <div class="book-card">
+        <h3>Gestion Avancée des Investissements</h3>
+        <a href="pdf/investissement_15_pages.pdf" download>LIRE</a>
+        <a href="pdf/investissement_15_pages.pdf" download>TÉLÉCHARGER</a>
+    </div>
+    <div class="book-card">
+        <h3>Marketing Digital</h3>
+        <a href="pdf/marketing_15_pages.pdf" download>LIRE</a>
+        <a href="pdf/marketing_15_pages.pdf" download>TÉLÉCHARGER</a>
+    </div>
+    <div class="book-card">
+        <h3>Comptabilité et Audit</h3>
+        <a href="pdf/comptabilite_15_pages.pdf" download>LIRE</a>
+        <a href="pdf/comptabilite_15_pages.pdf" download>TÉLÉCHARGER</a>
+    </div>
+    <div class="book-card">
+        <h3>Entrepreneuriat Innovant</h3>
+        <a href="pdf/entrepreneuriat_15_pages.pdf" download>LIRE</a>
+        <a href="pdf/entrepreneuriat_15_pages.pdf" download>TÉLÉCHARGER</a>
+    </div>
+    <div class="book-card">
+        <h3>Finance Personnelle</h3>
+        <a href="pdf/finance_personnelle_15_pages.pdf" download>LIRE</a>
+        <a href="pdf/finance_personnelle_15_pages.pdf" download>TÉLÉCHARGER</a>
+    </div>
+</div>
+
+<a href="tableau_de_bord.html" class="back-btn">← Retour</a>
+
+<footer class="socials">
+    <a href="https://wa.me/243993585711" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    <a href="https://www.instagram.com/greatman9609" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://www.tiktok.com/@bmjreussir" target="_blank"><i class="fab fa-tiktok"></i></a>
+    <a href="https://youtube.com/@justinmussiwa" target="_blank"><i class="fab fa-youtube"></i></a>
+    <a href="https://www.linkedin.com/posts/justin-mussiwa-167b8a331_cest-%C3%A0-vous-de-prendre-conscience-activity-7341023134810017792-ogV-?utm_source=share&utm_medium=member_android&rcm=ACoAAFOlYF8BCTITKFVpRsSSQmMzECBb2wI6YyE" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+</footer>
+
+<script>
+function toggleMenu(){
+    const menu=document.getElementById("menu");
+    menu.style.display=(menu.style.display==="flex")?"none":"flex";
+}
+</script>
+
+</body>
+</html>
